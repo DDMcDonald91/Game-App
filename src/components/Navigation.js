@@ -12,11 +12,11 @@ export default function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="/Game-App" id='navigation-item' style={{color: 'white'}}>Home</NavLink>
-            <NavLink to="#/browse" id='navigation-item' style={{color: 'white'}}>Browse</NavLink>
+            <NavLink to="/Game-App" style={{color: 'white', padding: '0 5px'}}>Home</NavLink>
+            <NavLink to="/browse" style={{color: 'white', padding: '0 5px'}}>Browse</NavLink>
           </Nav>
           <Nav>
-            <NavLink eventKey={1} to="/search">
+            <NavLink style={{color: 'white', padding: '0 5px'}} eventKey={1} to="/search">
             <FiSearch /> Search
             </NavLink>
           </Nav>
