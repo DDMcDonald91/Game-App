@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/Game-App' element={<Home />} />
         <Route path='/search' element={<Search />} />
         <Route path='/browse' element={<Browse />} />
         <Route path='/:name' element={<Game name={ name } />} />
