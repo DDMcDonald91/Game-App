@@ -1,7 +1,7 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { RiGamepadFill } from 'react-icons/ri'
 import { FiSearch } from 'react-icons/fi'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navigation() {
   return (
@@ -12,13 +12,13 @@ export default function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/Game-App">Home</Link>
-            <Link to="/browse">Browse</Link>
+            <NavLink to="/Game-App">Home</NavLink>
+            <NavLink to="browse">Browse</NavLink>
           </Nav>
           <Nav>
-            <Link eventKey={1} to="/search">
+            <NavLink eventKey={1} to="/search">
             <FiSearch /> Search
-            </Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
