@@ -56,7 +56,7 @@ export default function Home() {
                     </Container>
                     {newGames.map((obj => {
                         return (
-                            <Link to={`#/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
+                            <Link to={`/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
                         )
                     }))}
                 </Container>
