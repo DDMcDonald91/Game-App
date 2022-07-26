@@ -17,7 +17,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/Game-App' element={<Home />} />
-        <Route path='#/search' element={<Search />} />
+        <Route path='/#search' element={<Search />} />
         <Route path='#/browse' element={<Browse />} />
         <Route path='#/:name' element={<Game name={ name } />} />
       </Routes>
