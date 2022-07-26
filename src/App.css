@@ -9,7 +9,10 @@
   font-size: 1.75rem;
   font-family: 'Bebas Neue', cursive;
 }
-.nav-item {
+.nav-item:active,
+:link,
+:visited,
+:hover {
   color: white;
   font: 1.7rem;
   padding: 0 15px;
