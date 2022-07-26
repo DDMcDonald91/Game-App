@@ -10,14 +10,6 @@
   font-family: 'Bebas Neue', cursive;
 }
 
-#navigation-item:active,
-:link,
-:visited {
- color: white;
- padding: 7.5px;
- font-size: 1.75rem;
-}
-
 .header-title {
   font-size: 3.5rem;
 }
