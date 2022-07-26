@@ -12,10 +12,10 @@ export default function Navigation() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/Game-App">Home</Nav.Link>
-            <Nav.Link href="/Game-App/browse">Browse</Nav.Link>
+            <Nav.Link href="/browse">Browse</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={1} href="/Game-App/search">
+            <Nav.Link eventKey={1} href="/search">
             <FiSearch /> Search
             </Nav.Link>
           </Nav>

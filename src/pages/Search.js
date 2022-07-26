@@ -72,7 +72,7 @@ export default function Search() {
         {result.map(obj => {
           return (
             <Container key={obj.id}>
-                  <Link to={`/Game-App/${obj.title}`}><GameCard title={obj.title} img={obj.thumbnail} /></Link>
+                  <Link to={`/${obj.title}`}><GameCard title={obj.title} img={obj.thumbnail} /></Link>
           </Container>
         )
       })}
