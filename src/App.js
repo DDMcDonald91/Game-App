@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home'
 import Search from './pages/Search';
@@ -17,9 +17,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/Game-App' element={<Home />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/browse' element={<Browse />} />
-        <Route path='/:name' element={<Game name={ name } />} />
+        <Route path='#/search' element={<Search />} />
+        <Route path='#/browse' element={<Browse />} />
+        <Route path='#/:name' element={<Game name={ name } />} />
       </Routes>
 
     </div>

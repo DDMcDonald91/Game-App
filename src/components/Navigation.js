@@ -13,7 +13,7 @@ export default function Navigation() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavLink to="/Game-App" id='navigation-item' style={{color: 'white'}}>Home</NavLink>
-            <NavLink to="browse" id='navigation-item' style={{color: 'white'}}>Browse</NavLink>
+            <NavLink to="#/browse" id='navigation-item' style={{color: 'white'}}>Browse</NavLink>
           </Nav>
           <Nav>
             <NavLink eventKey={1} to="/search">
