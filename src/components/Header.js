@@ -7,7 +7,7 @@ export default function Header(props) {
       <Container style={{paddingTop: '5rem'}}>
         <h1 className='section-title header-title'>{props.heading}</h1>
         <p>{props.subHeading}</p>
-        <Link to='/browse'><Button className={props.hidden}>Browse All Games</Button></Link>
+        <Link to='/Game-App/browse'><Button className={props.hidden}>Browse All Games</Button></Link>
       </Container>
     </Container>
   )

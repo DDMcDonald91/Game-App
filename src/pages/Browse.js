@@ -33,7 +33,7 @@ export default function Browse() {
             <Container>
                 {data.map((obj => {
                         return (
-                            <Link to={`/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
+                            <Link to={`/Game-App/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
                         )
                     }))}
             </Container>

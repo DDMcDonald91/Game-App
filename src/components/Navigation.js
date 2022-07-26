@@ -7,15 +7,15 @@ export default function Navigation() {
     <Container fluid style={{padding: '0'}}>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
-        <Navbar.Brand id='logo' href="/"><RiGamepadFill /> Blak Kontroller</Navbar.Brand>
+        <Navbar.Brand id='logo' href="/Game-App"><RiGamepadFill /> Blak Kontroller</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/browse">Browse</Nav.Link>
+            <Nav.Link href="/Game-App">Home</Nav.Link>
+            <Nav.Link href="/Game-App/browse">Browse</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={1} href="/search">
+            <Nav.Link eventKey={1} href="/Game-App/search">
             <FiSearch /> Search
             </Nav.Link>
           </Nav>
