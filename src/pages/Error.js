@@ -4,12 +4,13 @@ import Header from '../components/Header'
 
 export default function Error() {
 
-  useEffect(() => {
+  if(!data) {
     return (
       <>
       <Header heading={"404 Error"} subHeading={"Seems to be an error. Head back to the home page"} hidden={'d-none'} />
       <Container>Sorry...</Container>
       </>
     )
-  }, 5000)
+  }
+
 }
