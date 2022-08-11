@@ -31,6 +31,10 @@ if(!data) {
     )  
 }
 
+if(data.length === 0) {
+  return(<p>game not found</p>)
+}
+
 console.log(props.name)
 let filtered = data.find(obj => {return obj.title === name});
 console.log(filtered)

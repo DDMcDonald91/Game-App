@@ -20,7 +20,7 @@ function App() {
         <Route path='/search' element={<Search />} />
         <Route path='/browse' element={<Browse />} />
         <Route path='/:name' element={<Game name={ name } />} />
-        <Route pate='*' element={<Error />} />
+        <Route pate='/*' element={<Error />} />
       </Routes>
 
     </div>
