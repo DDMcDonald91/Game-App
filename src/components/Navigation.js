@@ -8,11 +8,11 @@ export default function Navigation() {
     <Container fluid style={{padding: '0'}}>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
-        <Navbar.Brand id='logo' href="/Game-App"><RiGamepadFill /> Blak Kontroller</Navbar.Brand>
+        <Navbar.Brand id='logo' href="/"><RiGamepadFill /> Blak Kontroller</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="/Game-App" style={{color: 'white', padding: '0 5px'}}>Home</NavLink>
+            <NavLink to="/" style={{color: 'white', padding: '0 5px'}}>Home</NavLink>
             <NavLink to="/browse" style={{color: 'white', padding: '0 5px'}}>Browse</NavLink>
           </Nav>
           <Nav>
