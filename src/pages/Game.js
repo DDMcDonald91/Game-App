@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Game(props) {
   const [data, setData] = useState(null)
@@ -38,7 +39,7 @@ console.log(filtered)
   return (
     <>
     <Header heading={filtered.title} subHeading={`Released: ${filtered.release_date}`} hidden={'d-none'} />
-    <Container>
+    <Container style={{minHeight: '70vh'}}>
       <Row>
         <Col md={12} lg={5} className="d-flex justify-content-center">
           <Image src={filtered.thumbnail} className='img-fluid' style={{borderRadius: '5px'}} />
@@ -53,10 +54,11 @@ console.log(filtered)
           <Container fluid>
             <p>{filtered.short_description}</p>
           </Container>
-          <a href={filtered.game_url} target='_blank'><Button>Play Now!</Button></a>
+          <a href={filtered.game_url} target='_blank' rel="noreferrer"><Button variant="outline-dark">Play Now!</Button></a>
         </Col>
       </Row>
     </Container>
+    <Footer />
     </>
   )
 }

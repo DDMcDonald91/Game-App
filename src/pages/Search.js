@@ -34,7 +34,7 @@ export default function Search() {
     })
     
     const onChange = (e) => {
-      setSearch(e.target.value)
+      setSearch(e.target.value.charAt(0).toUpperCase()+ e.target.value.slice(1))
     }
 
     let toSearch = search

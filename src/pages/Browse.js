@@ -33,7 +33,9 @@ export default function Browse() {
             <Container>
                 {data.map((obj => {
                         return (
-                            <Link to={`/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
+                            <Container fluid key={obj.id}>
+                            <Link to={`/${obj.title}`}><GameRow key={obj.id} img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
+                            </Container>
                         )
                     }))}
             </Container>

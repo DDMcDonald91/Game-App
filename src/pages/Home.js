@@ -50,13 +50,15 @@ export default function Home() {
                         <Col className='d-none d-md-block'><Link to={`/${data[54].title}`}><GameCard img={data[54].thumbnail} title={data[54].title} /></Link></Col>
                     </Row>
                 </Container>
-                <Container id='new-container'>
+                <Container fluid id='new-container'>
                     <Container>
                         <h2 className='section-title sub-title'>Recently Added</h2>
                     </Container>
                     {newGames.map((obj => {
                         return (
+                            <Container style={{padding: '0px'}} fluid key={obj.id}>
                             <Link to={`/${obj.title}`}><GameRow img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
+                            </Container>
                         )
                     }))}
                 </Container>
