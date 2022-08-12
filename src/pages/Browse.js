@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import GameRow from '../components/GameRow';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
 
 export default function Browse() {
     const [data, setData] = useState(null);
@@ -39,6 +40,7 @@ export default function Browse() {
                         )
                     }))}
             </Container>
+            <Footer />
             </>
         )
     }
