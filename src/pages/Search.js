@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Container, Form } from 'react-bootstrap'
+import { Container, Form, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import {FiSearch} from 'react-icons/fi'
 import GameCard from '../components/GameCard';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
 
 export default function Search() {
     const [data, setData] = useState([]);
@@ -48,7 +49,7 @@ export default function Search() {
   return (
     <>
     <Header heading={'Find specific games from our catalog.'} subHeading={'Use the interactive search bar below.'} hidden={'d-none'} />
-    <Container>
+    <Container style={{minHeight: '80vh'}}>
       <h2><FiSearch /> Find Games</h2>
       <hr/>
       <Container>
@@ -69,15 +70,20 @@ export default function Search() {
       </Container>
 
       <Container>
-        {result.map(obj => {
-          return (
-            <Container key={obj.id}>
-                  <Link to={`/${obj.title}`}><GameCard title={obj.title} img={obj.thumbnail} /></Link>
-          </Container>
-        )
-      })}
+        <Row>
+          {result.map(obj => {
+            return (
+              <Col xs={12} sm={6} md={4}>
+                  <Container key={obj.id}>
+                    <Link to={`/${obj.title}`}><GameCard title={obj.title} img={obj.thumbnail} /></Link>
+                  </Container>
+              </Col>
+            )
+        })}
+        </Row>
     </Container>
     </Container>
+    <Footer />
     </>
   )
 }
