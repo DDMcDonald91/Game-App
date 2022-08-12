@@ -49,8 +49,8 @@
 }
 
 #footer {
-  min-height: 23vh;
+  min-height: 25vh;
   margin-top: 2rem;
-  padding: 0;
+  padding: 10px 0px;
   background-image: linear-gradient(white, #212529);
 }
