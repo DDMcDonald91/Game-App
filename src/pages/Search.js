@@ -62,7 +62,7 @@ export default function Search() {
               onChange={onChange}
               />
             <Form.Text className="text-muted">
-              Hundreds of games to choose from. All free.
+              Hundreds of games to search and choose from. All free.
             </Form.Text>
           </Form.Group>
         </Form>
