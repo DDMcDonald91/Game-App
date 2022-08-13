@@ -48,7 +48,11 @@ export default function Search() {
 
   return (
     <>
-    <Header heading={'Find specific games from our catalog.'} subHeading={'Use the interactive search bar below.'} hidden={'d-none'} />
+    <Header 
+      heading={'Find specific games from our catalog.'} 
+      subHeading={'Use the interactive search bar below to search for a specific game. Type the name in below and watch the options show up.'} 
+      hidden={'d-none'} 
+      />
     <Container style={{minHeight: '80vh'}}>
       <h2><FiSearch /> Find Games</h2>
       <hr/>

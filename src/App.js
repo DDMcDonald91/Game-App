@@ -7,6 +7,7 @@ import Search from './pages/Search';
 import Game from './pages/Game';
 import Browse from './pages/Browse';
 import Error from './pages/Error';
+import About from './pages/About';
 
 function App() {
   const { name } = useParams()
@@ -17,6 +18,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
         <Route path='/search' element={<Search />} />
         <Route path='/browse' element={<Browse />} />
         <Route path='/:name' element={<Game name={ name } />} />

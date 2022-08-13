@@ -30,7 +30,11 @@ export default function Browse() {
      } else {
         return (
             <>
-            <Header heading={'Browse from hundreds of games.'} subHeading={'Hundreds of Browser and PC games'} hidden={'d-none'} />
+            <Header 
+                heading={'Browse from hundreds of games.'} 
+                subHeading={'Hundreds of Browser and PC games are now at your disposal. Scroll through our database below or check out our search page to find a specific game.'} 
+                hidden={'d-none'} 
+                />
             <Container>
                 {data.map((obj => {
                         return (
