@@ -2,6 +2,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { RiGamepadFill } from 'react-icons/ri'
 import { FiSearch } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom';
+import DonationForm from './DonationForm';
 
 export default function Navigation() {
   return (
@@ -17,9 +18,10 @@ export default function Navigation() {
             <NavLink to="/browse" style={{color: 'white', padding: '0 5px'}}>Browse</NavLink>
           </Nav>
           <Nav>
-            <NavLink style={{color: 'white', padding: '0 5px'}} eventKey={1} to="/search">
-            <FiSearch /> Search
+            <NavLink style={{color: 'white', padding: '0 5px',}} eventKey={1} to="/search">
+              <Container className='d-flex align-items-center'><FiSearch /> Search</Container>
             </NavLink>
+            <DonationForm />
           </Nav>
         </Navbar.Collapse>
       </Container>
