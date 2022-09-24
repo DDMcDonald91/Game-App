@@ -8,6 +8,7 @@ import GameCard from '../components/GameCard';
 import GameRow from '../components/GameRow';
 import Loading from '../components/Loading';
 import Footer from '../components/Footer';
+import PurpleAdsCard from '../components/PurpleAdsCard'
 
 export default function Home() {
     const [data, setData] = useState(null);
@@ -101,6 +102,7 @@ export default function Home() {
                                     <Col><Link to={`/${data[38].title}`}><GameCard img={data[38].thumbnail} title={data[38].title} /></Link></Col>
                                     <Col><Link to={`/${data[138].title}`}><GameCard img={data[138].thumbnail} title={data[138].title} /></Link></Col>
                                     <Col><Link to={`/${data[220].title}`}><GameCard img={data[220].thumbnail} title={data[220].title} /></Link></Col>
+                                    <Col><PurpleAdsCard /></Col>
                                 </Stack>
                             </Container>
                             </Col>
