@@ -8,7 +8,6 @@ import GameCard from '../components/GameCard';
 import GameRow from '../components/GameRow';
 import Loading from '../components/Loading';
 import Footer from '../components/Footer';
-import PurpleAdsCard from '../components/PurpleAdsCard'
 
 export default function Home() {
     const [data, setData] = useState(null);
@@ -102,7 +101,7 @@ export default function Home() {
                                     <Col><Link to={`/${data[38].title}`}><GameCard img={data[38].thumbnail} title={data[38].title} /></Link></Col>
                                     <Col><Link to={`/${data[138].title}`}><GameCard img={data[138].thumbnail} title={data[138].title} /></Link></Col>
                                     <Col><Link to={`/${data[220].title}`}><GameCard img={data[220].thumbnail} title={data[220].title} /></Link></Col>
-                                    <Col><PurpleAdsCard /></Col>
+                                    <div><script src="https://cdn.purpleads.io/agent.js?publisherId=c3f48266d5f985561708777d27c27d2d:8cd386346fd64a258ccb46ab3b4f6a0be5798887da22fc76c8b5899ac3e5b748ae4302b97fd8598d382435fc16419405bb9b1e564bf062fda6c4e9f01c2ac490" data-pa-tag async></script></div>
                                 </Stack>
                             </Container>
                             </Col>
