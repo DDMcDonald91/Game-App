@@ -1,51 +1,71 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Container } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import Header from '../components/Header';
-import GameRow from '../components/GameRow';
-import { Link } from 'react-router-dom';
-import Loading from '../components/Loading';
+import GameList from '../components/GameList';
 import Footer from '../components/Footer';
 
 export default function Browse() {
-    const [data, setData] = useState(null);
+    const [genre, setGenre] = useState(null)
 
-    const url = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-        headers: {
-          'X-RapidAPI-Key': '61254c1e4cmshcc74a38697e3b87p12bb76jsn4854c036d859',
-          'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-      };
-    
-    //Get games on load
     useEffect(() => {
-        axios.request(url).then((res) => {setData(res.data)});
-        console.log('this worked')
-    }, [!data])
+        console.log(genre)
+    }, [genre])
 
-    if(!data) {
-        return ( <Loading /> )
-     } else {
         return (
             <>
             <Header 
                 heading={'Browse from hundreds of games.'} 
-                subHeading={'Hundreds of Browser and PC games are now at your disposal. Scroll through our database below or check out our search page to find a specific game.'} 
+                subHeading={'Hundreds free pc games are now at your disposal. Scroll through our database below or check out our search page to find a specific game.'} 
                 hidden={'d-none'} 
                 />
-            <Container>
-                {data.map((obj => {
-                        return (
-                            <Container fluid key={obj.id}>
-                            <Link to={`/${obj.title}`}><GameRow key={obj.id} img={obj.thumbnail} title={obj.title} description={obj.short_description} /></Link>
-                            </Container>
-                        )
-                    }))}
+            <Container style={{minHeight: '70vh'}}>
+            <h2>Choose a category</h2> 
+            <Navbar collapseOnSelect  expand="md">
+                <Container>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav variant="pills" defaultActiveKey="/home">
+                            <Nav.Item>
+                                <Nav.Link bg='dark' onClick={(e) => {setGenre('mmorpg')}} eventKey="link-0">MMORPG</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link onClick={(e) => {setGenre('shooter')}} eventKey="link-1">Shooter</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link onClick={(e) => {setGenre('strategy')}} eventKey="link-2">Strategy</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link onClick={(e) => {setGenre('survival')}} eventKey="link-3">Survival</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link onClick={(e) => {setGenre('anime')}} eventKey="link-4">Anime</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link onClick={(e) => {setGenre('action')}} eventKey="link-5">Action</Nav.Link>
+                            </Nav.Item>
+                            <NavDropdown title="View All Categories" id="nav-dropdown">
+                                <NavDropdown.Item onClick={(e) => {setGenre('racing')}} eventKey="4.1">Racing</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('open-world')}} eventKey="4.2">Open-World</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('mmotps')}} eventKey="4.3">MMOPTS</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('fighting')}}  eventKey="4.4">Fighting</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('zombie')}}  eventKey="4.5">Zombie</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('fantasy')}}  eventKey="4.6">Fantasy</NavDropdown.Item>
+                                <NavDropdown.Item onClick={(e) => {setGenre('card')}}  eventKey="4.7">Card</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                </Navbar>
+                {!genre ? 
+                    <>
+                    </> : 
+                    <>
+                        <GameList category={genre} />
+                    </>    
+                }
             </Container>
             <Footer />
             </>
         )
     }
-}
+
