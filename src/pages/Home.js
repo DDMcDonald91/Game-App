@@ -110,9 +110,9 @@ export default function Home() {
                     </Container>
                 </Container>
                 <Container fluid id='ad-container'>
-                    <Container fluid className='w-100 p-0'>
+                    <div>
                         <script src="https://cdn.purpleads.io/agent.js?publisherId=f8e68fa06b0ef7c333dd0ff8ab843fc7:2623094a678e54ad1a882c9ce3d529acc5ff32146962c0c5194bf6bc12389d83ae939ea9908bd628f3fbf3ec557b314fdc95a9736802ec123c3e9063d305ac10" data-pa-tag async></script>
-                    </Container>
+                    </div>
                 </Container>
             </Container>
             <Footer />
